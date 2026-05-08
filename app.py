@@ -6,13 +6,15 @@ import os
 import time
 from PIL import Image
 
-# -----------------------------
-# CONFIGURATION
-# -----------------------------
-ENDPOINT = "https://cv97898657.cognitiveservices.azure.com/"
-API_KEY = "3rjI2tJgEjvUS9ve9DnwGTdgu0JW5B5i0u2mE8QpRzgaCPh4l1AwJQQJ99CEACYeBjFXJ3w3AAAFACOG0FxE"
-SPEECH_KEY = "2LNcNfQUrK6f0jj3eZ1ssHm1qALaeiXmn1foajdEdGGo9bxH06i5JQQJ99CEACYeBjFXJ3w3AAAYACOGrjDr"
-SPEECH_REGION = "eastus"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+ENDPOINT = os.getenv("ENDPOINT")
+API_KEY = os.getenv("API_KEY")
+SPEECH_KEY = os.getenv("SPEECH_KEY")
+SPEECH_REGION = os.getenv("SPEECH_REGION")
 
 # -----------------------------
 # CREATE CLIENT
